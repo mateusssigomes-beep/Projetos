@@ -1,6 +1,6 @@
 from postoenum import PostoEnum
 
-class PessoaTripulaca():
+class PessoaTripulacao():
     def __init__(self, nome: str, posto: PostoEnum, idade: int, experiencia_anos: int ):
         self.nome = nome 
         self.posto = posto

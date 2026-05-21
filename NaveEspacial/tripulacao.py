@@ -3,6 +3,8 @@ from postoenum import PostoEnum
 class PessoaTripulacao():
     def __init__(self, nome: str, posto: PostoEnum, idade: int, experiencia_anos: int ):
         self.nome = nome 
+        if not isinstance(posto, PostoEnum):
+            raise ValueError('Posto inválido')
         self.posto = posto
         self.idade = idade  # setter 
         self.experiencia_anos = experiencia_anos # setter 
@@ -27,9 +29,9 @@ class PessoaTripulacao():
     
     @experiencia_anos.setter
     def experiencia_anos(self, valor):
-        if valor > self.idade - 1:
+        if valor > self.idade - 18:
             raise ValueError(
-                'EXP maior que tempo de vida do tripulante'
+                'EXP maior que tempo de vida do tripulante. '
                 f'Idade:{self.idade}, Exp:{valor}')
         else:
             self._experiencia_anos = valor 

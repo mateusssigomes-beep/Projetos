@@ -22,3 +22,11 @@ class Filme(Video):
         # if self.visto 
     
  
+    
+    def reproduzir(self):
+        print(f"Reproduzindo o filme '{self.titulo}'...")
+        self.visto = True
+    
+    # def __str__(self):
+    #     generos_str = ", ".join([g.name for g in self.lista_generos]) if self.lista_generos else "Nenhum"
+    #     return f"Filme: {self.titulo} | Diretor: {self.diretor} | Ano: {self.ano} | IMDb: {self.imdb_rating} | Gêneros: {generos_str}"
